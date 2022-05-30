@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&Macondo&family=Open+Sans&display=swap");
+
+:root {
+    --heading-font: Macondo, sans-serif;
+    --paragraph-font: "Open Sans", sans-serif;
+
+    --primary-color: hsl(0, 0%, 16%);
+    --secondary-color: hsl(60, 100%, 96%);
+    --accent1-color: hsl(53, 100%, 70%);
+    --accent2-color: hsl(1, 100%, 68%);
+    --accent3-color: hsl(179, 100%, 40%);
+
+    /* Breakpoints: 640px, 768px, 1024px, 1280px, 1536px */
+}
