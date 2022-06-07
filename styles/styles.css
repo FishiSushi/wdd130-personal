@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bangers&Macondo&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Macondo&family=Open+Sans&display=swap");
 
 :root {
     --heading-font: Macondo, sans-serif;
@@ -10,5 +10,106 @@
     --accent2-color: hsl(1, 100%, 68%);
     --accent3-color: hsl(179, 100%, 40%);
 
-    /* Breakpoints: 640px, 768px, 1024px, 1280px, 1536px */
+    --bp-sm: 640px;
+    --bp-md: 768px;
+    --bp-lg: 1024px;
+    --bp-xl: 1280px;
+    --bp-2xl: 1536px;
+}
+
+/* Quick and Dirty Reset */
+
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    box-sizing: border-box;
+}
+
+/* Styles */
+
+body {
+    background-color: var(--secondary-color);
+    font-family: var(--paragraph-font);
+}
+
+a {
+    color: var(--accent3-color);
+    text-decoration: none;
+}
+
+header {
+    min-height: 58px;
+    background-color: var(--primary-color);
+    border-bottom: var(--accent1-color) solid 2px;
+}
+
+nav {
+    max-width: var(--bp-xl);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    background-color: var(--primary-color);
+}
+
+#logo {
+    margin-right: 2.5em;
+    margin-bottom: -20px;
+}
+
+nav ul {
+    flex: 1;
+    list-style: none;
+    display: flex;
+}
+
+nav ul a {
+    display: block;
+    color: var(--accent1-color);
+    text-decoration: none;
+    padding: 1em 2.5em;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul a:hover {
+    color: var(--primary-color);
+    background-color: var(--accent2-color);
+}
+
+nav ul a:active {
+    color: var(--primary-color);
+    background-color: var(--accent1-color);
+}
+
+main {
+    max-width: var(--bg-xl);
+    margin: 0 auto;
+    padding: 2em;
+}
+
+footer {
+    text-align: center;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    padding: 2.5em;
+}
+
+#nav-toggle {
+    display: none;
+}
+
+.cave {
+    height: 100px;
+    color: var(--primary-color);
+}
+
+.icon {
+    width: 2em;
+    color: var(--secondary-color);
 }
