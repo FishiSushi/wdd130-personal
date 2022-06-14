@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>One Page One Shots</title>
+        <link rel="stylesheet" href="styles/styles.css" />
+        <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+        <script src="scripts/script.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <nav x-data="dropdown" x-bind="dropdown">
+                    <div id="logo">
+                        <a href="/">
+                            <img src="images/logo.svg" alt="logo" />
+                        </a>
+                    </div>
+
+                    <ul x-bind="dialogue" x-cloak x-transition>
+                        <li>
+                            <a href="/">Home</a>
+                        </li>
+                        <li>
+                            <a href="/products.html">Products</a>
+                        </li>
+                        <li>
+                            <a href="/blog.html">Blog</a>
+                        </li>
+                        <li>
+                            <a href="/site-plan.html">Site Plan</a>
+                        </li>
+                    </ul>
+
+                    <button class="nav-toggle" x-bind="trigger">
+                        <template x-if="!open">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </template>
+
+                        <template x-if="open">
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </template>
+                    </button>
+                </nav>
+            </div>
+        </header>
+
+        <main></main>
+
+        <footer>
+            <span>One Page One Shots &copy; 2022 - Jacob Lemieux</span>
+        </footer>
+    </body>
+</html>
