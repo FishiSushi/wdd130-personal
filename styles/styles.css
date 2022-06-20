@@ -37,6 +37,11 @@ body {
     margin: 0;
     font-family: var(--paragraph-font);
     background-color: darkgray;
+    min-height: 100vh;
+}
+
+#content {
+    min-height: 100vh;
 }
 
 a {
@@ -219,6 +224,10 @@ footer {
     padding: 1.25em;
     display: grid;
     place-content: center;
+    background-color: #fff;
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    margin-left: 2em;
 }
 
 #promo-grid,
