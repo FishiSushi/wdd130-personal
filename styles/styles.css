@@ -82,21 +82,31 @@ header {
 }
 
 article {
-    margin: 2.25em;
-    padding: 2.25em;
+    margin: 2em;
+    padding: 2em;
     background-color: #ffffff;
-    border: 1px solid var(--primary-color);
+    border: 2px solid var(--primary-color);
     border-radius: 10px;
     box-shadow: var(--box-shadow);
+    text-align: center;
 }
 
 article h2 {
     margin-bottom: 1.5em;
-    text-align: center;
 }
 
 article h3 {
+    margin-block: 1.5rem;
     color: var(--primary-color);
+}
+
+article p {
+    text-align: left;
+    margin-inline: auto;
+}
+
+article time {
+    font-size: 0.75em;
 }
 
 #content {
@@ -228,6 +238,7 @@ footer {
     border: 2px solid var(--primary-color);
     border-radius: 10px;
     margin-left: 2em;
+    box-shadow: var(--box-shadow);
 }
 
 #promo-grid,
