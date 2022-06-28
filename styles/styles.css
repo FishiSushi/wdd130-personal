@@ -71,6 +71,7 @@ h3 {
 p {
     max-width: 60ch;
     margin-bottom: 1rem;
+    line-height: 1.5;
 }
 
 header {
