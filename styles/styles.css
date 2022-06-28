@@ -29,10 +29,6 @@
     box-sizing: border-box;
 }
 
-[x-cloak] {
-    display: none !important;
-}
-
 body {
     margin: 0;
     font-family: var(--paragraph-font);
@@ -82,7 +78,8 @@ header {
 }
 
 article {
-    margin: 2em;
+    max-width: fit-content;
+    margin: auto;
     padding: 2em;
     background-color: #ffffff;
     border: 2px solid var(--primary-color);
@@ -117,32 +114,6 @@ nav {
     position: relative;
     display: flex;
     justify-content: space-between;
-}
-
-nav ul {
-    position: absolute;
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    flex: 1 1 auto;
-    background-color: var(--primary-color);
-}
-
-nav ul a {
-    display: block;
-    padding: 1.25em 1.5em;
-    font-size: 1.25em;
-    text-decoration: none;
-    color: var(--secondary-color);
-    transition: all 0.3s ease-in-out;
-}
-
-nav ul a:hover {
-    text-decoration: none;
-    color: var(--primary-color);
-    background-color: var(--accent1-color);
 }
 
 main {
@@ -294,8 +265,6 @@ footer {
 }
 
 .nav-toggle {
-    position: relative;
-    z-index: 10;
     color: var(--secondary-color);
     background-color: var(--primary-color);
     border: none;
@@ -361,12 +330,56 @@ footer {
     height: 32px;
 }
 
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: var(--primary-color); /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--secondary-color);
+    display: block;
+    transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+    color: var(--accent1-color);
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
 /* Midsized Screens Plus */
 @media screen and (min-width: 768px) {
-    .nav-toggle {
-        display: none;
-    }
-
     nav ul {
         position: static;
         display: flex;

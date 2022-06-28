@@ -1,3 +1,16 @@
+/* Open the sidenav */
+function openNav() {
+    document.getElementById('mySidenav').style.width = '100%'
+}
+
+/* Close/hide the sidenav */
+function closeNav() {
+    document.getElementById('mySidenav').style.width = '0'
+}
+
+/*
+
+// Initialize Alpine JS Components
 document.addEventListener('alpine:init', () => {
     // Dropdown Component
     Alpine.data('dropdown', (initialOpenState = false) => ({
@@ -41,3 +54,5 @@ document.addEventListener('alpine:init', () => {
         },
     }))
 })
+
+*/

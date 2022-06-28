@@ -6,58 +6,36 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>One Page One Shots</title>
         <link rel="stylesheet" href="styles/styles.css" />
-        <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-        <script src="scripts/script.js"></script>
+        <script src="scripts/script.js" defer></script>
     </head>
     <body>
         <header>
             <div class="container">
-                <nav x-data="dropdown" x-bind="dropdown">
+                <nav>
                     <div id="logo">
                         <a href="/">
                             <img src="images/logo.svg" alt="logo" />
                         </a>
                     </div>
 
-                    <ul x-bind="dialogue" x-cloak x-transition>
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="products.html">Products</a>
-                        </li>
-                        <li>
-                            <a href="blog.html">Blog</a>
-                        </li>
-                        <li>
-                            <a href="site-plan.html">Site Plan</a>
-                        </li>
-                    </ul>
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="index.html">Home</a>
+                        <a href="products.html">Products</a>
+                        <a href="blog.html">Blog</a>
+                        <a href="site-plan.html">Site Plan</a>
+                    </div>
 
-                    <button class="nav-toggle" x-bind="trigger">
-                        <template x-if="!open">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                stroke-width="2"
-                            >
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-                            </svg>
-                        </template>
-
-                        <template x-if="open">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                fill="none"
-                                viewBox="0 0 24 24"
-                                stroke="currentColor"
-                                stroke-width="2"
-                            >
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </template>
+                    <button class="nav-toggle" onclick="openNav()">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
                     </button>
                 </nav>
             </div>
